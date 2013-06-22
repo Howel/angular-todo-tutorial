@@ -1,10 +1,13 @@
 <div class="hero-unit">
   <h2>My Todos</h2>
   <!-- Loop through the todos and add a text input -->
-  <p ng-repeat="todo in todos">
+  <p ng-repeat="todo in todos" class="input-append">
   	<input type="text" ng-model="todo">
+  	<button class="btn btn-danger" ng-click="removeTodo(todo)">&times;</button>
   </p>
 
+  <hr />
+  
   <form class="form-inline" ng-submit="addTodo()">
   	<input type="text" ng-model="todo">
   	<input class="btn btn-primary" type="submit" value="Add Todo">

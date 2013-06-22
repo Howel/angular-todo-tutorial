@@ -9,4 +9,7 @@ angular.module('todoApp')
 		$scope.todo = '';
     };
 
+    $scope.removeTodo = function(todo) {
+    	$scope.todos.splice($scope.todos.indexOf(todo), 1);
+    }
   });

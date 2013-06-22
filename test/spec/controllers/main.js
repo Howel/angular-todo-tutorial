@@ -27,4 +27,10 @@ describe('Controller: MainCtrl', function () {
     expect(scope.todos.indexOf('Another Todo')).toBe(3);
     expect(scope.todo).toBe('');
   });
+
+  it('should remove a todo when removeTodo is called', function () {
+    scope.removeTodo('Buy Milk');
+    expect(scope.todos.length).toBe(2);
+    expect(scope.todos.indexOf('Buy Milk')).toBe(-1);
+  })
 });
