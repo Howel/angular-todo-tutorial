@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoApp', [])
+angular.module('todoApp', ['ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
