@@ -265,7 +265,6 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
-    'compass:server',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -275,7 +274,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'coffee',
-    'compass',
     'connect:test',
     'karma'
   ]);
@@ -285,7 +283,6 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
-    'compass:dist',
     'useminPrepare',
     'imagemin',
     'cssmin',
