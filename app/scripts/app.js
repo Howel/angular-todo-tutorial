@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoApp', ['LocalStorageModule'])
+angular.module('todoApp', ['ngRoute', 'LocalStorageModule'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

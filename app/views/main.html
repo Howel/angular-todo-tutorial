@@ -1,15 +1,27 @@
-<div class="hero-unit">
-  <h2>My Todos</h2>
-  <!-- Loop through the todos and add a text input -->
-  <p ng-repeat="todo in todos" class="input-append">
-  	<input type="text" ng-model="todo">
-  	<button class="btn btn-danger" ng-click="removeTodo(todo)">&times;</button>
-  </p>
+<div class="row">
+	<div class="col-md-offset-3 col-md-6">
+		<h1>My Todos</h1>
 
-  <hr />
-  
-  <form class="form-inline" ng-submit="addTodo()">
-  	<input type="text" ng-model="todo">
-  	<input class="btn btn-primary" type="submit" value="Add Todo">
-  </form>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Todos</th>
+					<th class="text-right">Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Loop through the todos and add a text input -->
+				<tr ng-repeat="todo in todos">
+					<td>{{todo}}</td>
+					<td class="text-right"><button class="btn btn-danger" ng-click="removeTodo(todo)">&times;</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<form role="form" ng-submit="addTodo()">
+			<div class="form-group">
+				<input type="text" class="form-control" id="todo" placeholder="Add a todo" ng-model="todo">
+			</div>
+			<button type="submit" class="btn btn-success pull-right">Save</button>
+		</form>
+	</div>
 </div>
