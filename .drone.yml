@@ -1,6 +1,8 @@
 image: dockerfile/nodejs
 git:
     path: github.com/jbydeley/angular-todo-tutorial
+env:
+    PHANTOMJS_BIN: "/usr/local/lib/node_modules/phantomjs/lib/phantom/bin/phantomjs"
 script:
     - npm install
     - npm install -g bower
