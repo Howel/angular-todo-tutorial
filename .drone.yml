@@ -5,6 +5,6 @@ script:
     - npm install
     - npm install -g bower
     - npm install -g grunt-cli
-    - bower install --allow-sudo
+    - bower install --allow-root
     - grunt test
 
