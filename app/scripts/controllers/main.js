@@ -3,8 +3,8 @@
 angular.module('todoApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
     var todosInStorage = localStorageService.get('todos');
-    
-    // $scope.todos = todosInStorage && todosInStorage.split('\n') || []; 
+
+    // $scope.todos = todosInStorage && todosInStorage.split('\n') || [];
     // The line above is shorthand for the if condition below
 
 	if (todosInStorage) {
