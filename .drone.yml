@@ -1,0 +1,7 @@
+image: dockerfile/nodejs
+git:
+    path: github.com/jbydeley/angular-todo-tutorial
+script:
+    - npm install
+    - bower install
+
